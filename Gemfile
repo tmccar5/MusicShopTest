@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
@@ -35,8 +35,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 end
-
+group :test do
+	gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+	gem 'capybara', '~> 2.7', '>= 2.7.1'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
